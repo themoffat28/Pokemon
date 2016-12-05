@@ -1,6 +1,7 @@
 package pokemon.model;
 
-public class Grass
+public interface Grass
 {
-
+	public int leafBlade();
+	public int razorLeaf();
 }

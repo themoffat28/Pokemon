@@ -1,6 +1,7 @@
 package pokemon.model;
 
-public class Fire
+public interface Fire
 {
-
+	public int fireBlast();
+	public int magmaStorm();
 }

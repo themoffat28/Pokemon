@@ -1,6 +1,6 @@
 package pokemon.model;
 
-public class Electric
+public interface Electric
 {
 	public int thunder();
 	public int boltStrike();

@@ -1,6 +1,7 @@
 package pokemon.model;
 
-public class Rock
+public interface Rock
 {
-
+	public int stoneEdge();
+	public int rockTomb();
 }

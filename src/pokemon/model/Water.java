@@ -1,11 +1,7 @@
 package pokemon.model;
 
-public class Water
+public interface Water
 {
-
-	public static void main(String[] args)
-	{
-		private JTextField
-	}
-
+	public int hydroCannon();
+	public int waterSpout();
 }
