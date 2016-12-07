@@ -14,11 +14,11 @@ public class Rotom extends Pokemon implements Electric
 	
 	public int thunder()
 	{
-		return //int
+		return 20;
 	}
 	
 	public int boltStrike()
 	{
-		return //int
+		return getAttackPoints * 100;
 	}
 }
