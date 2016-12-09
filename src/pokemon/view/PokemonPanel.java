@@ -80,7 +80,7 @@ public class PokemonPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(baseLayout);
-		this.setPrefferedSize(new Dimension(900,600));
+		this.setSize(new Dimension(900,600));
 		this.setBackground(Color.RED);
 		
 		numberField.setEditable(false);
@@ -183,10 +183,14 @@ public class PokemonPanel extends JPanel
 				healthField.setText(baseController.getPokedex().get(selected).getHitPoints() + "");
 				advancedArea.setText(baseController.getPokedex().get(selected).getPokemonInformation() + "\n" + baseController.getPokedex().get(selected).getPokemonTypes());
 				
-				changeColorBasedOnType(baseController.getPokedex().get(selected).getPokemonTypes());
 				changeImageDisplay(baseController.getPokedex().get(selected).getClass().getSimpleName());
 		}
 	});
+		
+	private void changeColorBasedOnType(String data)
+	{
+		
+	}
 		
 		this.addMouseListener(new MouseListener()
 		{
