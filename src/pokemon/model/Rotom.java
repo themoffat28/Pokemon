@@ -19,6 +19,6 @@ public class Rotom extends Pokemon implements Electric
 	
 	public int boltStrike()
 	{
-		return getAttackPoints * 100;
+		return getAttackPoints() * 100;
 	}
 }

@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import pokemon.controller.PokemonController;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.*;
 
 public class PokemonPanel extends JPanel
 {
@@ -59,6 +60,23 @@ public class PokemonPanel extends JPanel
 		setupListeners();
 	}
 	
+	private void changeImageDisplay(String name)
+	{
+		String path = "/pokemon/view/Images/";
+		String defaultName = "Pokeball";
+		String extension = ".png";
+		try
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch (NullPointerException missingFile)
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		pokemonLabel.setIcon(pokemonIcon);
+		repaint();
+	}
+	
 	private void setupPanel()
 	{
 		this.setLayout(baseLayout);
@@ -88,11 +106,6 @@ public class PokemonPanel extends JPanel
 		this.add(speedField);
 		this.add(numberField);
 		this.add(advancedArea);
-	}
-	
-	private void setupListeners()
-	{
-		
 	}
 	
 	private void setupLayout()
@@ -148,5 +161,74 @@ public class PokemonPanel extends JPanel
 		
 		baseLayout.putConstraint(SpringLayout.WEST, nameLabel, 0, SpringLayout.WEST, combatLabel);
 		baseLayout.putConstraint(SpringLayout.SOUTH, nameLabel, 0, SpringLayout.SOUTH, pokedexSelector);
+	}
+
+	private void setupDropdown()
+	{
+		
+	}
+
+	private void setupListeners()
+	{
+		updateButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent selection)
+			{
+				int selected = pokedexSelector.getSelectedIndex();
+				System.out.println(baseController.getPokedex().get(selected));
+				nameField.setText(baseController.getPokedex().get(selected).getName());
+				numberField.setText(baseController.getPokedex().get(selected).getName());
+				combatField.setText(baseController.getPokedex().get(selected).getAttackPoints() + "");
+				speedField.setText(baseController.getPokedex().get(selected).getSpeed() + "");
+				healthField.setText(baseController.getPokedex().get(selected).getHitPoints() + "");
+				advancedArea.setText(baseController.getPokedex().get(selected).getPokemonInformation() + "\n" + baseController.getPokedex().get(selected).getPokemonTypes());
+				
+				changeColorBasedOnType(baseController.getPokedex().get(selected).getPokemonTypes());
+				changeImageDisplay(baseController.getPokedex().get(selected).getClass().getSimpleName());
+		}
+	});
+		
+		this.addMouseListener(new MouseListener()
+		{
+			public void mouseEntered(MouseEvent entered)
+			{
+				
+			}
+			
+			public void mouseExited(MouseEvent exited)
+			{
+				
+			}
+			
+			public void mousePressed(MouseEvent pressed)
+			{
+				
+			}
+			
+			public void mouseReleased(MouseEvent released)
+			{
+				
+			}
+			
+			public void mouseClicked(MouseEvent clicked)
+			{
+				
+			}
+
+	});
+		
+		this.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseDragged(MouseEvent dragged)
+			{
+				
+			}
+			
+			public void mouseMoved(MouseEvent moved)
+			{
+				
+			}
+			
+		});
 	}
 }
