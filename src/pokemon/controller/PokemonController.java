@@ -25,11 +25,11 @@ public class PokemonController
 	
 	private void buildPokedex()
 	{
-		pokedex.add(new GeoDude("Hands with a face"));
-		pokedex.add(new GoGoat("Leaf Dog"));
-		pokedex.add(new Ponyta("Pony that stepped on a wire"));
-		pokedex.add(new Rotom("Flying Candle"));
-		pokedex.add(new Staryu("Metal Starfish"));
+		pokedex.add(new GeoDude("Geodude"));
+		pokedex.add(new GoGoat("GoGoat"));
+		pokedex.add(new Rotom("Rotom"));
+		pokedex.add(new Staryu("Staryu"));
+		pokedex.add(new Ponyta("Ponyta"));
 	}
 	
 	public String[] buildPokedexText()
@@ -48,8 +48,8 @@ public class PokemonController
 		Pokemon current = pokedex.get(index);
 		current.setName(name);
 		current.setAttackPoints(combat);
-		current.setSpeed(speed);
 		current.setHitPoints(health);
+		current.setSpeed(speed);
 	}
 	
 	public ArrayList<Pokemon> getPokedex()

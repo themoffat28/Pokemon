@@ -19,6 +19,6 @@ public class GeoDude extends Pokemon implements Rock
 	
 	public int rockTomb()
 	{
-		return getAttackPoints() * 60;
+		return getAttackPoints() * 80;
 	}
 }

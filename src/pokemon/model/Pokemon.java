@@ -69,7 +69,7 @@ public abstract class Pokemon
 		String pokemonTypes = "-----\nTYPES:\n";
 		Class<?> [] types = getClass().getInterfaces();
 		String [] pokeTypes = new String[types.length];
-		for(int index = 0; index < types.length; index++);
+		for(int index = 0; index < types.length; index++)
 		{
 			String temp = types[index].getCanonicalName();
 			pokeTypes[index] = temp;

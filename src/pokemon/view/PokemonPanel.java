@@ -177,7 +177,7 @@ public class PokemonPanel extends JPanel
 				int selected = pokedexSelector.getSelectedIndex();
 				System.out.println(baseController.getPokedex().get(selected));
 				nameField.setText(baseController.getPokedex().get(selected).getName());
-				numberField.setText(baseController.getPokedex().get(selected).getName());
+				numberField.setText(baseController.getPokedex().get(selected).getNumber() + "");
 				combatField.setText(baseController.getPokedex().get(selected).getAttackPoints() + "");
 				speedField.setText(baseController.getPokedex().get(selected).getSpeed() + "");
 				healthField.setText(baseController.getPokedex().get(selected).getHitPoints() + "");
@@ -187,39 +187,11 @@ public class PokemonPanel extends JPanel
 		}
 	});
 		
-	private void changeColorBasedOnType(String data)
+	//private void changeColorBasedOnType(String data)
 	{
 		
 	}
-		
-		this.addMouseListener(new MouseListener()
-		{
-			public void mouseEntered(MouseEvent entered)
-			{
-				
-			}
-			
-			public void mouseExited(MouseEvent exited)
-			{
-				
-			}
-			
-			public void mousePressed(MouseEvent pressed)
-			{
-				
-			}
-			
-			public void mouseReleased(MouseEvent released)
-			{
-				
-			}
-			
-			public void mouseClicked(MouseEvent clicked)
-			{
-				
-			}
 
-	});
 		
 		this.addMouseMotionListener(new MouseMotionListener()
 		{
