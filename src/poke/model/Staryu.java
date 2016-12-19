@@ -1,4 +1,4 @@
-package pokemon.model;
+package poke.model;
 
 public class Staryu extends Pokemon implements Water
 {

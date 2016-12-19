@@ -1,4 +1,4 @@
-package pokemon.model;
+package poke.model;
 
 public class Ponyta extends Pokemon implements Fire
 {
@@ -9,7 +9,7 @@ public class Ponyta extends Pokemon implements Fire
 	
 	public Ponyta(String name)
 	{
-		super(name, 077);
+		super(name, 77);
 	}
 	
 	public int fireBlast()

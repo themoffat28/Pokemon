@@ -1,4 +1,4 @@
-package pokemon.model;
+package poke.model;
 
 public class Rotom extends Pokemon implements Electric
 {

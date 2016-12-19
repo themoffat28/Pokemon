@@ -1,9 +1,11 @@
-package pokemon.view;
+package poke.view;
 
 import java.awt.Color;
 import javax.swing.*;
+
+import poke.controller.PokemonController;
+
 import java.awt.Dimension;
-import pokemon.controller.PokemonController;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.*;

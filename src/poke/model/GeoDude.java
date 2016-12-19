@@ -1,4 +1,4 @@
-package pokemon.model;
+package poke.model;
 
 public class GeoDude extends Pokemon implements Rock
 {
@@ -9,7 +9,7 @@ public class GeoDude extends Pokemon implements Rock
 	
 	public GeoDude(String name)
 	{
-		super(name, 074);
+		super(name, 74);
 	}
 	
 	public int stoneEdge()
