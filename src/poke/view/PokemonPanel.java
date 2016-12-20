@@ -35,7 +35,7 @@ public class PokemonPanel extends JPanel
 	{
 		this.baseController = baseController;
 		this.baseLayout = new SpringLayout();
-		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/Pokeball.png"));
+		this.pokemonIcon = new ImageIcon(getClass().getResource("/poke/view/images/Pokeball.png"));
 		this.updateButton = new JButton("Update Stats");
 		
 		updateButton.addActionListener(new ActionListener() {
@@ -62,9 +62,33 @@ public class PokemonPanel extends JPanel
 		setupListeners();
 	}
 	
+	private void changeColorBasedOnData(String data)
+	{
+		if (data.contains("Ponyta"))
+		{
+			this.setBackground(Color.RED);
+		}
+		else if (data.contains("Rotom"))
+		{
+			this.setBackground(Color.YELLOW);
+		}
+		else if (data.contains("GeoDude"))
+		{
+			this.setBackground(Color.GRAY);
+		}
+		else if (data.contains(""))
+		{
+			this.setBackground(Color.GREEN);
+		}
+		else if (data.contains("Water"))
+		{
+			this.setBackground(Color.BLUE);
+		}
+	}
+	
 	private void changeImageDisplay(String name)
 	{
-		String path = "/pokemon/view/Images/";
+		String path = "/poke/view/Images/";
 		String defaultName = "Pokeball";
 		String extension = ".png";
 		try
@@ -189,10 +213,6 @@ public class PokemonPanel extends JPanel
 		}
 	});
 		
-	//private void changeColorBasedOnType(String data)
-	{
-		
-	}
 
 		
 		this.addMouseMotionListener(new MouseMotionListener()

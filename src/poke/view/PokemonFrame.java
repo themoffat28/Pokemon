@@ -23,7 +23,7 @@ import poke.view.PokemonPanel;
 	private void setupFrame()
 	{
 		this.setContentPane(pokemonPanel);
-		this.setTitle("Pokedex");
+		this.setTitle("Pokemon");
 		this.setSize(900, 600);
 		this.setVisible(true);
 	}

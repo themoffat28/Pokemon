@@ -32,6 +32,7 @@ public class PokemonController
 		pokedex.add(new Rotom("Rotom"));
 		pokedex.add(new Staryu("Staryu"));
 		pokedex.add(new Ponyta("Ponyta"));
+		pokedex.add(new GeoDude("GeoDude"));
 	}
 	
 	public String[] buildPokedexText()
